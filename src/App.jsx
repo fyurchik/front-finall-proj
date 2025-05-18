@@ -4,15 +4,20 @@ import MovieList from './components/MovieList';
 function App() {
   return (
     <div className="app">
+      <div className="floating-element"></div>
+      <div className="floating-element"></div>
+      
       <header className="app-header">
         <h1>Кіноафіша</h1>
-        <p>Актуальні фільми у кінотеатрах</p>
+        <p>Відкрийте для себе найкращі кіноновинки цього сезону</p>
       </header>
+      
       <main>
         <MovieList movies={movies} />
       </main>
+      
       <footer className="app-footer">
-        <p>© 2025 Кіноафіша. Всі права захищені.</p>
+        <p>© {new Date().getFullYear()} Кіноафіша Premium</p>
       </footer>
     </div>
   );
