@@ -4,7 +4,7 @@ export const movies = [
     title: "Дюна: Частина друга",
     description: "Продовження епічної саги про Полa Атріда та його подорож пустелею Арракіса.",
     genre: "Фантастика, Драма",
-    posterUrl: "https://example.com/dune-poster.jpg",
+    posterUrl: new URL('../assets/posters/dune_2.png', import.meta.url).href,
     showTime: "2023-11-15T19:00:00"
   },
   {
@@ -12,7 +12,7 @@ export const movies = [
     title: "Оппенгеймер",
     description: "Історія життя фізика-теоретика Дж. Роберта Оппенгеймера, творця атомної бомби.",
     genre: "Біографія, Драма, Історичний",
-    posterUrl: "https://example.com/oppenheimer-poster.jpg",
+    posterUrl: new URL('../assets/posters/opengammer.png', import.meta.url).href,
     showTime: "2023-11-15T21:30:00"
   },
   {
@@ -20,7 +20,7 @@ export const movies = [
     title: "Барбі",
     description: "Барбі виганяють з Барбіленду через недосконалість, і вона вирушає у справжній світ.",
     genre: "Комедія, Фентезі",
-    posterUrl: "https://example.com/barbie-poster.jpg",
+    posterUrl: new URL('../assets/posters/barbie.png', import.meta.url).href,
     showTime: "2023-11-16T18:00:00"
   },
   {
@@ -28,7 +28,7 @@ export const movies = [
     title: "Місія нездійсненна: Розплата",
     description: "Ітан Хант і його команда знову рятують світ від глобальної загрози.",
     genre: "Бойовик, Трилер",
-    posterUrl: "https://example.com/mission-impossible-poster.jpg",
+    posterUrl: new URL('../assets/posters/mission_impoessible.png', import.meta.url).href,
     showTime: "2023-11-16T20:45:00"
   },
   {
@@ -36,7 +36,7 @@ export const movies = [
     title: "Холодний серцем 3",
     description: "Нова пригода Анни, Ельзи та їхніх друзів у чарівному королівстві Еренделл.",
     genre: "Мультфільм, Фентезі, Музика",
-    posterUrl: "https://example.com/frozen3-poster.jpg",
+    posterUrl: new URL('../assets/posters/frozen_hard.png', import.meta.url).href,
     showTime: "2023-11-17T17:30:00"
   },
   {
@@ -44,7 +44,7 @@ export const movies = [
     title: "Вонка",
     description: "Молодий Віллі Вонка і його початок у світі шоколадної магії.",
     genre: "Фентезі, Музика, Сімейний",
-    posterUrl: "https://example.com/wonka-poster.jpg",
+    posterUrl: new URL('../assets/posters/vonka.jpg', import.meta.url).href,
     showTime: "2023-11-17T19:15:00"
   }
 ];
