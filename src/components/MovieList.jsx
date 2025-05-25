@@ -11,27 +11,24 @@ const MovieList = ({ movies }) => {
 
   return (
     <div className="movie-list-container">
-      <div className="search-container">
+      <div className="search-container mb-4 flex items-center">
         <input
           type="text"
           placeholder="Пошук фільмів..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="search-input"
+          className="search-input flex-1 border rounded px-3 py-1"
         />
-        <svg className="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-        </svg>
       </div>
       
       {filteredMovies.length > 0 ? (
-        <div className="movie-list">
+        <div className="movie-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredMovies.map(movie => (
             <MovieCard key={movie.id} movie={movie} />
           ))}
         </div>
       ) : (
-        <div className="no-results">
+        <div className="no-results text-center text-gray-600">
           <p>Фільми не знайдено. Спробуйте інший запит.</p>
         </div>
       )}
@@ -40,16 +37,7 @@ const MovieList = ({ movies }) => {
 };
 
 MovieList.propTypes = {
-  movies: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      genre: PropTypes.string.isRequired,
-      posterUrl: PropTypes.string.isRequired,
-      showTime: PropTypes.string.isRequired
-    })
-  ).isRequired
+  movies: PropTypes.arrayOf(MovieCard.propTypes.movie).isRequired
 };
 
 export default MovieList;

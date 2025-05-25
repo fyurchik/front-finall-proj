@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const MovieCard = ({ movie }) => {
   const formatDate = (dateString) => {
@@ -38,6 +39,9 @@ const MovieCard = ({ movie }) => {
           </svg>
           <span>{formatDate(movie.showTime)}</span>
         </div>
+        <Link to={`/booking/${movie.id}`} className="btn-book">
+          Забронювати
+        </Link>
       </div>
     </div>
   );
