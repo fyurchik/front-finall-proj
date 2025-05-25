@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Booking from './pages/Booking';
+import { ToastContainer } from 'react-toastify';
 
 const App = () => (
   <div className="app">
@@ -20,6 +21,7 @@ const App = () => (
     <footer className="app-footer">
       <p>© {new Date().getFullYear()} Кіноафіша Premium</p>
     </footer>
+    <ToastContainer position="top-right" autoClose={3000} />
   </div>
 );
 

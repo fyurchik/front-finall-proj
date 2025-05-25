@@ -2,10 +2,10 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 0.5rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 .seat {
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 4px;
   text-align: center;
   cursor: pointer;
@@ -20,16 +20,7 @@
   color: white;
 }
 .booked {
-  background-color: #ccc;
-  color: #666;
+  background-color: red;
+  color: white;
   cursor: not-allowed;
-}
-.selected-list {
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 480px) {
-  .cinema-hall {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
